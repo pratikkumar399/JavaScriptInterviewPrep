@@ -15,3 +15,4 @@ user.foo()    // Prints "Simple function call" and then "false"
 let fun1 = user.foo1
 fun1()        // Prints "true"
 user.foo1()   // Prints "false"
+foo();

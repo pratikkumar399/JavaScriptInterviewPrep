@@ -23,5 +23,25 @@ let airLine1 = {
     bookings: [],
 }
 
-airLine.bookTickets.call(airLine1, 'Pratik', 1000);
+airLine.bookTickets.call(airLine1, 'Patrcik', 1000);
+airLine.bookTickets.apply(airLine1, ['PatRick2', 10002]);
 console.log(airLine1.bookings);
+
+
+let obj = {
+    name: 'Pratik',
+    age: 21
+}
+
+let obj2 = {
+    name: 'Pratik2',
+    age: 22
+}
+
+function greeting() {
+    console.log(`Hello ${this.name} your age is ${this.age}`);
+    console.log(this);
+}
+
+greeting.bind(obj2)();
+console.log(this);

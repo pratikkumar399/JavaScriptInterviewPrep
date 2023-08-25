@@ -36,5 +36,15 @@ let arr = [{    // array of objects
 }]
 
 arr.forEach((item) => {
-    console.log(item.name);
+    console.log(item);
 })
+
+
+const myObject = {
+    value: 42,
+    getValue: () => {
+        console.log(this.value); // 'this' is inherited from the surrounding scope
+    }
+};
+
+myObject.getValue();

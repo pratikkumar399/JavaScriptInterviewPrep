@@ -27,7 +27,7 @@ let obj1 = {
     }
 }
 
-console.log(this); // window object
+console.log(this);
 
 // this keyword in function
 
@@ -42,7 +42,7 @@ let obj2 = {
 }
 
 function fun() {
-    console.log(this); // window object
+    console.log("Inside function", this); // window object
 }
 
 fun();
