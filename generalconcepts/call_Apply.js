@@ -38,10 +38,13 @@ let obj2 = {
     age: 22
 }
 
-function greeting() {
-    console.log(`Hello ${this.name} your age is ${this.age}`);
-    console.log(this);
+const person1 = {
+    name: 'Pratik',
+    age: 21,
+    greet: function (country) {
+        console.log(`Hello ${this.name} your age is ${this.age} and you are from ${country}`);
+    }
 }
 
-greeting.bind(obj2)();
+greeting.bind(obj2, 'India')();
 console.log(this);
