@@ -1,0 +1,7 @@
+.heading1{
+    display: none;
+}
+
+.heading1.headingdisplay{
+    display: block;
+}

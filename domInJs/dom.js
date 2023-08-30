@@ -46,13 +46,32 @@
 // manipulating the DOM
 
 
-const heading = document.querySelector('#heading');
-heading.style.color = 'red';
-heading.innerHTML = 'Hello World from DOM';
+// const heading = document.querySelector('#heading');
+// heading.style.color = 'red';
+// heading.innerHTML = 'Hello World from DOM';
 
 
-const parent = document.querySelector('.parent');
-console.log(parent.children);
-parent.firstElementChild.style.color = 'green';
-parent.lastElementChild.style.color = 'blue';
-parent.firstElementChild.nextElementSibling.style.color = 'orange';
+// const parent = document.querySelector('.parent');
+// console.log(parent.children);
+// parent.firstElementChild.style.color = 'green';
+// parent.lastElementChild.style.color = 'blue';
+// parent.firstElementChild.nextElementSibling.style.color = 'orange';
+
+
+// event listener
+
+const display = document.querySelector(".headingdisplay");
+const heading1 = document.querySelector(".heading1");
+
+
+function showHeading() {
+    if (heading1.classList.contains('headingdisplay')) {
+        heading1.classList.remove('headingdisplay');
+    }
+    else {
+        heading1.classList.add('headingdisplay');
+    }
+}
+
+display.addEventListener('click', showHeading);
+
