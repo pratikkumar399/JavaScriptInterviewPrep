@@ -1,0 +1,111 @@
+
+body{
+    background: url(../assets/garden.jpg) no-repeat center center/cover;
+    height: 98vh;
+    width : 98vw;
+    position: relative;
+}
+
+.ball{
+    background: pink;
+    border-radius: 50%;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+}
+@keyframes slide {
+    0% {
+      left: 0;
+      top: 0;
+    }
+    25% {
+    top: 95%;
+    left: 0%;
+    }
+    50%{
+        top: 0%;
+        left: 50%;
+    }
+    75%{
+        top: 95%;
+        left: 97.5%;
+    }
+    100% {
+      left: 97.5%;
+      top: 0%;
+    }
+}
+
+
+body:hover .ball{
+    animation: slide 4s infinite;
+}
+
+
+#open-modal{
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    height: 80px;
+    width: 350px;
+    font-size: 2rem;
+    background: transparent;
+    color: #fff;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0px 0px 3px black;
+    transition: 0.5s;
+}
+
+#open-modal:hover{
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+
+#modal{
+    background: white;
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50% , -50%);
+    width: 180px;
+    height: 100px;
+    display: flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    transition: all .2s ease-in-out;
+}
+
+#modal:hover{
+    transform: scale(1.5);
+}
+
+@keyframes animate{
+    25%{
+        transform: translate(-50% , -50%) scale(0);
+    }
+    100%{
+        transform: translate(-50% , -50%) scale(1);
+    }
+}
+
+#modal:hover{
+    background-color: antiquewhite;
+}
+
+#close-modal{
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: red;
+}
+
+#close-modal:hover{
+    color: blue;
+}
