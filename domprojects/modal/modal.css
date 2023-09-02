@@ -18,27 +18,31 @@ body{
       left: 0;
       top: 0;
     }
-    25% {
+    20% {
     top: 95%;
     left: 0%;
     }
-    50%{
+    40%{
         top: 0%;
         left: 50%;
     }
-    75%{
+    60%{
         top: 95%;
         left: 97.5%;
     }
-    100% {
+    80% {
       left: 97.5%;
       top: 0%;
     }
+    100% {
+        left: 0%;
+        top: 0%;
+      }
 }
 
 
 body:hover .ball{
-    animation: slide 4s infinite;
+    animation: slide 6s infinite;
 }
 
 
@@ -56,6 +60,9 @@ body:hover .ball{
     padding: 5px;
     box-shadow: 0px 0px 3px black;
     transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #open-modal:hover{
@@ -80,18 +87,19 @@ body:hover .ball{
     border-radius: 10px;
     font-size: 1.5rem;
     transition: all .2s ease-in-out;
+    animation: animate 0.8s linear;
+    
 }
 
-#modal:hover{
-    transform: scale(1.5);
-}
 
 @keyframes animate{
-    25%{
-        transform: translate(-50% , -50%) scale(0);
+   from{
+    top: -300px;
+    opacity: 0;
     }
-    100%{
-        transform: translate(-50% , -50%) scale(1);
+    to{
+        top: 50%;
+        opacity: 1;
     }
 }
 
@@ -108,4 +116,15 @@ body:hover .ball{
 
 #close-modal:hover{
     color: blue;
+}
+
+#modal-container{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.2);
 }
