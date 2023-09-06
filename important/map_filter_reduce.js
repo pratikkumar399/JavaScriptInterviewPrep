@@ -5,11 +5,17 @@ const arr = nums.map((element) => {
     return element * 2;
 });
 
+
+const filteredArr = nums.filter((element) => {
+    return element % 2 === 0;   // returns true or false    
+});
+
 console.log(arr);
+console.log(filteredArr);
 
 // reduce() -> returns a single value by executing a function for each element of array
-const number = nums.reduce((acc, curr, i, arr) => {
-    return acc + arr[i];
+const number = nums.reduce((acc, curr) => {
+    return acc + curr;
 }, 0);
 
 console.log(number);
