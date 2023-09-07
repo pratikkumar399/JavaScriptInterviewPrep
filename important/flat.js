@@ -44,4 +44,8 @@ let flatArrObject = arrObject.flatMap((item) => {
     return item;
 });
 
+
+
+
+
 console.log(flatArrObject);
