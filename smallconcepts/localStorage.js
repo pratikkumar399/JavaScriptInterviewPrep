@@ -2,7 +2,7 @@
 
 localStorage.setItem('name', 'John');
 localStorage.setItem('age', '30');
-console.log(locaStorage);
+console.log(localStorage);
 
 // get an item from local Storage
 console.log(localStorage.getItem('name'));
