@@ -22,7 +22,7 @@ function greet1(name) {
     console.log('Hello ' + name);
 }
 
-setTimeout(greet1, 1000, 'John', 'Doe'); // Hello John // Doe will be ignored               
+setTimeout(greet1, 1000, 'John'); // Hello John         
 
 // // example
 
@@ -47,3 +47,8 @@ function greet3(name) {
 
 myVar = setInterval(greet3, 500, 'John'); // Hello John // Hello John //   
 clearInterval(myVar); // to stop the execution of the function
+
+// arrow function
+setInterval(() => {
+    console.log('Hello World')
+}, 1000);
