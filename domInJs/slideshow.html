@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Slideshow Page</title>
+    <style>
+        /* styles.css */
+        .slideshow-container {
+            position: relative;
+            max-width: 50%;
+            /* overflow: hidden; */
+        }
+
+        .slide {
+            /* display: none; */
+            position: absolute;
+            width: 50%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slideshow-container">
+        <div class="slide">
+            <img src="image1.png" alt="Slide 1">
+        </div>
+        <div class="slide">
+            <img src="image2.png" alt="Slide 2">
+        </div>
+        <div class="slide">
+            <img src="image3.png" alt="Slide 3">
+        </div>
+    </div>
+    <script>
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("slide");
+        console.log(slides);
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change slide every 2 seconds
+        }
+
+        showSlides();
+
+    </script>
+</body>
+
+</html>
