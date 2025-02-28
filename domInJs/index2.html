@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .parent {
+            height: 50vh;
+            width: 50vw;
+            background-color: yellow;
+            border: 2px solid black;
+            display: grid;
+            place-items: center;
+
+        }
+
+        .box {
+            width: 50%;
+            aspect-ratio: 1;
+            background-color: red;
+            border: 2px solid black;
+
+        }
+
+        .text ul :last-child {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="parent">
+        <div class="box" onclick="clickEvent()">1</div>
+        <div class="box">1</div>
+    </div> -->
+
+    <button class="btn">
+        click me
+    </button>
+
+    <div id="unique">
+        <p>hello</p>
+    </div>
+
+    <div class="text">
+        <ol>
+            <li>hello</li>
+            <li>hello</li>
+            <li>hello</li>
+            <li>hello</li>
+        </ol>
+        <ul>
+            <li>this is unordered</li>
+            <li>this is unordered</li>
+            <li>this is unordered</li>
+            <li>this is unordered</li>
+        </ul>
+    </div>
+    <script src="./index2.js"></script>
+    <!-- async and defer -->
+</body>
+
+</html>
+
+<!-- id is unique and class can be duplicate -->

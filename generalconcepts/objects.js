@@ -2,9 +2,13 @@
 
 // -> key value pairs 
 
+let birthYear = 1999;
+let currentYear = new Date().getFullYear();
+let age = currentYear - birthYear;
+
 let obj = {
     name: 'Pratik',
-    age: 21,
+    age: age,
     address: {
         city: 'delhi',
         state: 'delhi'
